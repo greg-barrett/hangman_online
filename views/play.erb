@@ -1,0 +1,15 @@
+<img class="hang" src="img/hang_<%= @bad_guess %>.png" alt="hangman">
+
+<div class="box">
+<p><%= @blanks_string_spaces %></p>
+<p>Please enter your guess...</p>
+
+  <form action="/" method="post">
+    <input type='text' name='guess' id='guess' />
+    <input type='submit' value='Guess!' />
+  </form>
+
+<p> Number of incorrect guesses <%= @bad_guess %>.</p>
+<p>Previous guesses.</p>
+<%= @guess_array.join(" - ") %>
+</div>
