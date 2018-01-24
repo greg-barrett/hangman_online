@@ -4,6 +4,7 @@ enable :sessions
 
 helpers do
   def store_guess(filename, string) # stores the guess in a file
+    string.downcase!
     File.open(filename, "a+") do |file|
       file.puts(string)
     end
