@@ -60,7 +60,7 @@ helpers do
   end
 
   def win # if win or lose page gets redirected
-    if  session[:bad_guess] < 9 && session[:play_word] == session[:blanks_string]
+    if  session[:bad_guess] < 10 && session[:play_word] == session[:blanks_string]
       File.open('guesses.txt', 'w') {|file| file.truncate(0) }
       redirect "/win"
     elsif session[:bad_guess] == 10
